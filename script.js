@@ -11,8 +11,9 @@ document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
 
   // When there is no input
-  if (!guess) {
-    document.querySelector('.message').textContent = '⛔ No Number!';
+  if (guess <= 0 || guess > 20) {
+    document.querySelector('.message').textContent =
+      '⛔ Enter betweem 1 and 20!';
 
     // when player wins
   } else if (guess === secretNumber) {
